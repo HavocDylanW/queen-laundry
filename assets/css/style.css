@@ -1,0 +1,194 @@
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    body {
+        width: 100%;
+        background-color: #e7e7e4;
+    }
+    
+    .container {
+        max-width: 80%;
+        margin: 0px auto;
+    }
+
+    header {
+        background-color: #e7e7e4;
+        position: sticky;
+        top: 0;
+        left: 0;
+        height: 60px;
+    }
+
+    header ul {
+        margin: 0;
+        padding: 20px;
+    }
+
+    header ul li {
+        list-style-type: none;
+        display: inline-block;
+    }
+
+    header ul li a {
+        position: relative;
+        bottom: 4.6pc;
+        left: 3.5pc;
+        font-family: arial;
+        color: black;
+        padding: 10px;
+        font-weight: bold;
+        text-align: justify;
+        text-decoration: none;
+    }
+
+    header li a:hover,
+    header li a.active {
+        color: 	#FF5F1F;
+    }
+
+    header li a.active::after,
+    header li a:hover::after {
+        content: '';
+        width: 50%;
+        height: 2px;
+        background: orange;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        bottom: 6px;
+        left: 11px;
+    }
+
+    .active {
+        color: 	#FF5F1F;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    #cover {
+        height: 90.8vh;
+        width: 100%;
+        background-size: cover;
+        background-position: top 25% right 0;
+        padding: 0 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    #cover h1 {
+        position: absolute;
+        text-align: right;
+        font-family: arial;
+        font-size: 60px;
+        color: black;
+        padding-left: 29pc;
+        margin-bottom: 25pc;
+    }
+
+    #cover h1 span {
+        color: orange;
+        position: relative;
+    }
+
+    #cover h2 {
+        position: absolute;
+        text-align: right;
+        font-family: arial;
+        color: black;
+        padding-top: 10px;
+        padding-left: 44pc;
+        margin-bottom: 20pc;
+    }
+
+    #close {
+        display: none;
+    }
+
+    #close {
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }
+
+
+    lButton {
+        position: absolute;
+        padding: 20px 50px;
+        display: flex;
+        left: 50pc;
+        bottom: 22pc;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 200px;
+        overflow: hidden;
+        border-radius: 40px;
+    }
+      
+    lButton span {
+        position: relative;
+        color: #fff;
+        font-size: 15px;
+        font-family: Arial;
+        letter-spacing: 8px;
+        z-index: 1;
+    }
+      
+    lButton .liquid {
+        position: absolute;
+        top: -80px;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        background: orange;
+        box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+        transition: .5s;
+    }
+      
+    lButton .liquid::after,
+    lButton .liquid::before {
+        content: '';
+        width: 200%;
+        height: 200%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -75%);
+        background: #000;
+    }
+      
+    lButton .liquid::before {
+        
+        border-radius: 45%;
+        background: rgba(20, 20, 20, 1);
+        animation: animate 5s linear infinite;
+    }
+      
+    lButton .liquid::after {
+        
+        border-radius: 40%;
+        background: rgba(20, 20, 20, .5);
+        animation: animate 10s linear infinite;
+    }
+      
+    lButton:hover .liquid{
+        top: -120px;
+    }
+      
+    @keyframes animate {
+        0% {
+          transform: translate(-50%, -75%) rotate(0deg);
+        }
+        100% {
+          transform: translate(-50%, -75%) rotate(360deg);
+        }
+    }
